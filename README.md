@@ -4,6 +4,16 @@ The aim of this project is to build simple PoC of the agent which is using fetch
 
 Please keep in mind that this agent is **hosted locally**, so is available only when host is online and agent is running.
 
+[![FetchAI & Ollama & GS Force AI](https://img.youtube.com/vi/RwUw2AMYOEk/0.jpg)](https://www.youtube.com/watch?v=RwUw2AMYOEk)
+
+## How to run
+
+1. Clone the repository
+2. `cd fetchai_agent_for_ollama`
+3. `poetry shell`
+4. Make sure you have `ollama` working on your machine, this PoC is using `llama2` model, you can check if it is running with `ollama ps` command
+5. `python3 gs_force_ai_node.py`
+
 ## Used technology stack
 
 - [uagents](https://pypi.org/project/uagents/) from [Fetch.ai](https://fetch.ai/docs/concepts/agents/agents),
