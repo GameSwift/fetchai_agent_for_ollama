@@ -1,5 +1,5 @@
 from uagents import Agent, Context, Model, Protocol
-from pydantic import Field
+from pydantic.v1 import Field
 from ai_engine import UAgentResponse, UAgentResponseType
 import os
 from os_helpers import load_env_file
@@ -11,7 +11,9 @@ AGENT_SEED = os.environ["AGENT_SEED"]
 AGENT_MAILBOX_KEY = os.environ["AGENT_MAILBOX_KEY"]
 
 class GsForceAiRequest(Model):
-    user_prompt: str = Field(description="Ask AI anything you want")
+    user_prompt: str = Field(
+        description="Ask AI anything you want"
+        )
 
 GsForceAiNode = Agent(
     name="Ollama Agent", 
