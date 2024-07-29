@@ -6,7 +6,10 @@ authors = ["Tom Kowalczyk <tom@gameswift.io>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<3.13"
+uagents = "^0.14.0"
+uagents-ai-engine = "^0.4.0"
+pydantic = "^2.8.2"
 
 
 [build-system]
