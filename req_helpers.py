@@ -6,7 +6,7 @@ def request_ollama(prompt, model, host):
     }
     data = f'{{"model": "{model}", "prompt": "{prompt}", "stream": false}}'
     response = requests.post(
-        f'"{host}"', 
+        host, 
         headers=headers, 
         data=data
         )
