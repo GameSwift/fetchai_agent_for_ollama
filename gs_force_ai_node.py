@@ -13,7 +13,7 @@ OLLAMA_MODEL = os.environ["OLLAMA_MODEL"]
 OLLAMA_HOST = os.environ["OLLAMA_HOST"]
 
 class GsForceAiRequest(Model):
-    user_prompt: str = Field()
+    user_prompt: str = Field("What you would like to ask GS Force AI?")
 
 GsForceAiNode = Agent(
     name="GS FORCE AI", 
