@@ -1,12 +1,12 @@
 import requests
 
-def request_ollama(prompt):
+def request_ollama(prompt, model, host):
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
     }
-    data = f'{{"model": "llama2", "prompt": "{prompt}", "stream": false}}'
+    data = f'{{"model": "{model}", "prompt": "{prompt}", "stream": false}}'
     response = requests.post(
-        'http://localhost:11434/api/generate', 
+        f'"{host}"', 
         headers=headers, 
         data=data
         )
